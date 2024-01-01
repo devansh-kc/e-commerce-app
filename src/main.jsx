@@ -5,10 +5,13 @@ import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <App />
-    <Toaster position="top-center" />
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+      <Toaster position="top-center" />
+    </Provider>
+  </BrowserRouter>
 );

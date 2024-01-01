@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "../Components/Reusable component/Button/Button";
 
 function CardPage({ product }) {
   const navigate = useNavigate();
@@ -24,13 +25,15 @@ function CardPage({ product }) {
               <p> price : {items.price} rs</p>
             </div>
 
-            <button
+            <Button
+              onHover="black"
+              bg="black"
               onClick={() => navigate(`/explore/${items.id}`)}
               type="button"
               className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Discover more
-            </button>
+            </Button>
           </div>
         </div>
       ))}

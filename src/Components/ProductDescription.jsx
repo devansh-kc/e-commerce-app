@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, deleteFromCart } from "../feature/CartSlice";
 import { toast } from "react-hot-toast";
+import Button from "./Reusable component/Button/Button";
 
 export function ProductDescription({ productData }) {
   const dispatch = useDispatch();
@@ -59,21 +60,25 @@ export function ProductDescription({ productData }) {
           </div>
           <div className="space-s-4 3xl:pr-48 flex items-center gap-2 border-b border-gray-300 py-8  md:pr-32 lg:pr-12 2xl:pr-32">
             {cartData.some((item) => item.id === productData.id) ? (
-              <button
+              <Button
+                bg="black"
+                onHover="black"
                 onClick={() => deleteData(productData.id)}
                 type="button"
                 className="h-11 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
                 Remove from cart
-              </button>
+              </Button>
             ) : (
-              <button
+              <Button
+                bg="black"
+                onHover="black"
                 onClick={add}
                 type="button"
                 className="h-11 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
                 Add to cart
-              </button>
+              </Button>
             )}
           </div>
           <div className="py-6 ">

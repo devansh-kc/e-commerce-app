@@ -111,7 +111,7 @@ export const data = [
       "operating system": "Up to Windows 11 Pro | Linux (Ubunto / Fedora)",
     },
     category: "productivity",
-
+    rating: 4.9,
     price: 2596,
   },
 ];

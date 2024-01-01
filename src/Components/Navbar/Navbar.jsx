@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -12,10 +12,21 @@ const menuItems = [
     name: "Explore",
     to: "/explore",
   },
+
+  {
+    name: "Login",
+    to: "/login",
+  },
+  {
+    name: "SignUp",
+    to: "/signup",
+  },
 ];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const [loggedInuser, setLoggedInUser] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

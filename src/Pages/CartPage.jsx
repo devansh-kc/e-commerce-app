@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Cart } from "../Components/Navbar/Cart";
+import { Cart } from "../Components/Cart";
 
 import { useSelector } from "react-redux";
 

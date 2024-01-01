@@ -7,7 +7,7 @@ import {
   increaseQuantity,
   deleteFromCart,
   decreaseQuantity,
-} from "../../feature/CartSlice";
+} from "../feature/CartSlice";
 
 export function Cart({ item }) {
   const navigate = useNavigate();
