@@ -10,6 +10,7 @@ import CartPage from "./Pages/CartPage";
 import PageDescription from "./Pages/PageDescription";
 import { useLocation } from "react-router-dom";
 import { data } from "./assets/data";
+import Sidebar from "./Components/Sidebar/Sidebar";
 function App() {
   const location = useLocation();
   return (

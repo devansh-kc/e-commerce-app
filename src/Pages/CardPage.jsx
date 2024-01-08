@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Components/Reusable component/Button/Button";
-
+import Sidebar from "../Components/Sidebar/Sidebar";
 function CardPage({ product }) {
   const navigate = useNavigate();
   return (
     <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
+      <Sidebar />
       {product.map((items, id) => (
         <div key={id} className="rounded-md border">
           <img
